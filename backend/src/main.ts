@@ -7,7 +7,10 @@ async function bootstrap() {
   
   // Enable CORS
   app.enableCors({
-    origin: 'http://localhost:3000', // React URL
+    origin: [
+      'http://localhost:3000',                  // dev local FE
+      'https://englishplatform.onrender.com'    // FE đã deploy
+    ],
     credentials: true,
   });
   
